@@ -1,0 +1,281 @@
+> Activity 1 - 
+> use social_platform
+switched to db social_platform
+>
+> Activity 2 - 
+>
+> db.account.insertOne({userID : 1, username : ["git","linked","List"],password : "123456987",email : "shubhang@gmail.com",followers : 1,status : "Inactive"})
+{
+        "acknowledged" : true,
+        "insertedId" : ObjectId("600c05c066d2810047edf557")
+}
+>
+> Activity 3 - 
+>
+> db.account.insert({userID : 2, username : ["git","linked"],password : "123456",email : "shubh@gmail.com",followers : 100,status : "Active"});
+WriteResult({ "nInserted" : 1 })
+>
+>
+> Activity 4 -
+> 
+> var acc = [
+...
+... {userID : 3, username : ["git"],password : "123456987",email : "jai@gmail.com",followers : 50,status : "Inactive"},
+...
+... {userID : 4, username : ["linked","List"],password : "1234987",email : "hitesh@gmail.com",followers : 1000,status : "Active"},
+...
+... {userID : 5, username : ["git","linked","List","shubh69"],password : "1234569",email : "shubh369@gmail.com",followers : 120000,status : "Active"},
+...
+... {userID : 6, username : ["git","linked","List","jai Sharma"],password : "12345",email : "List@gmail.com",followers : 1,status : "Inactive"},
+...
+... {userID : 7, username : ["git","linked","List","Stack"],password : "3456987",email : "stack@gmail.com",followers : 16,status : "Inactive"},
+...
+... {userID : 8, username : ["git","linked","List","Graph"],password : "1234587",email : "Graph@gmail.com",followers : 19,status : "Active"},
+...
+... {userID : 9, username : ["git","linked","List","NOne"],password : "12387",email : "None@gmail.com",followers : 196,status : "Inactive"},
+...
+... {userID : 10, username : ["git","linked","List","Python"],password : "1234569870000",email : "python@gmail.com",followers : 1999999,status : "Active"}
+...
+... ]
+>
+> db.account.insertMany(acc);
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("600c064466d2810047edf559"),
+                ObjectId("600c064466d2810047edf55a"),
+                ObjectId("600c064466d2810047edf55b"),
+                ObjectId("600c064466d2810047edf55c"),
+                ObjectId("600c064466d2810047edf55d"),
+                ObjectId("600c064466d2810047edf55e"),
+                ObjectId("600c064466d2810047edf55f"),
+                ObjectId("600c064466d2810047edf560")
+        ]
+}
+> 
+> Activity 5 - 
+>
+> db.account.find()[3];
+{
+        "_id" : ObjectId("600c064466d2810047edf55a"),
+        "userID" : 4,
+        "username" : [
+                "linked",
+                "List"
+        ],
+        "password" : "1234987",
+        "email" : "hitesh@gmail.com",
+        "followers" : 1000,
+        "status" : "Active"
+}
+>  
+> Activity 6 -
+> 
+> db.account.find().forEach(printjson);
+{
+        "_id" : ObjectId("600c05c066d2810047edf557"),
+        "userID" : 1,
+        "username" : [
+                "git",
+                "linked",
+                "List"
+        ],
+        "password" : "123456987",
+        "email" : "shubhang@gmail.com",
+        "followers" : 1,
+        "status" : "Inactive"
+}
+{
+        "_id" : ObjectId("600c05e866d2810047edf558"),
+        "userID" : 2,
+        "username" : [
+                "git",
+                "linked"
+        ],
+        "password" : "123456",
+        "email" : "shubh@gmail.com",
+        "followers" : 100,
+        "status" : "Active"
+}
+{
+        "_id" : ObjectId("600c064466d2810047edf559"),
+        "userID" : 3,
+        "username" : [
+                "git"
+        ],
+        "password" : "123456987",
+        "email" : "jai@gmail.com",
+        "followers" : 50,
+        "status" : "Inactive"
+}
+{
+        "_id" : ObjectId("600c064466d2810047edf55a"),
+        "userID" : 4,
+        "username" : [
+                "linked",
+                "List"
+        ],
+        "password" : "1234987",
+        "email" : "hitesh@gmail.com",
+        "followers" : 1000,
+        "status" : "Active"
+}
+{
+        "_id" : ObjectId("600c064466d2810047edf55b"),
+        "userID" : 5,
+        "username" : [
+                "git",
+                "linked",
+                "List",
+                "shubh69"
+        ],
+        "password" : "1234569",
+        "email" : "shubh369@gmail.com",
+        "followers" : 120000,
+        "status" : "Active"
+}
+{
+        "_id" : ObjectId("600c064466d2810047edf55c"),
+        "userID" : 6,
+        "username" : [
+                "git",
+                "linked",
+                "List",
+                "jai Sharma"
+        ],
+        "password" : "12345",
+        "email" : "List@gmail.com",
+        "followers" : 1,
+        "status" : "Inactive"
+}
+{
+        "_id" : ObjectId("600c064466d2810047edf55d"),
+        "userID" : 7,
+        "username" : [
+                "git",
+                "linked",
+                "List",
+                "Stack"
+        ],
+        "password" : "3456987",
+        "email" : "stack@gmail.com",
+        "followers" : 16,
+        "status" : "Inactive"
+}
+{
+        "_id" : ObjectId("600c064466d2810047edf55e"),
+        "userID" : 8,
+        "username" : [
+                "git",
+                "linked",
+                "List",
+                "Graph"
+        ],
+        "password" : "1234587",
+        "email" : "Graph@gmail.com",
+        "followers" : 19,
+        "status" : "Active"
+}
+{
+        "_id" : ObjectId("600c064466d2810047edf55f"),
+        "userID" : 9,
+        "username" : [
+                "git",
+                "linked",
+                "List",
+                "NOne"
+        ],
+        "password" : "12387",
+        "email" : "None@gmail.com",
+        "followers" : 196,
+        "status" : "Inactive"
+}
+{
+        "_id" : ObjectId("600c064466d2810047edf560"),
+        "userID" : 10,
+        "username" : [
+                "git",
+                "linked",
+                "List",
+                "Python"
+        ],
+        "password" : "1234569870000",
+        "email" : "python@gmail.com",
+        "followers" : 1999999,
+        "status" : "Active"
+}
+>
+> Activity 7 - 
+>
+> var W = db.account;
+> W.find({followers : {$gt : 50}} , {_id : 0,username : 1});
+{ "username" : [ "git", "linked" ] }
+{ "username" : [ "linked", "List" ] }
+{ "username" : [ "git", "linked", "List", "shubh69" ] }
+{ "username" : [ "git", "linked", "List", "NOne" ] }
+{ "username" : [ "git", "linked", "List", "Python" ] }
+>
+> Activity 8 -
+> 
+> W.find({},{_id : 0,username : 1,email : 1, followers : 1}).pretty().skip(5);
+{
+        "username" : [
+                "git",
+                "linked",
+                "List",
+                "jai Sharma"
+        ],
+        "email" : "List@gmail.com",
+        "followers" : 1
+}
+{
+        "username" : [
+                "git",
+                "linked",
+                "List",
+                "Stack"
+        ],
+        "email" : "stack@gmail.com",
+        "followers" : 16
+}
+{
+        "username" : [
+                "git",
+                "linked",
+                "List",
+                "Graph"
+        ],
+        "email" : "Graph@gmail.com",
+        "followers" : 19
+}
+{
+        "username" : [
+                "git",
+                "linked",
+                "List",
+                "NOne"
+        ],
+        "email" : "None@gmail.com",
+        "followers" : 196
+}
+{
+        "username" : [
+                "git",
+                "linked",
+                "List",
+                "Python"
+        ],
+        "email" : "python@gmail.com",
+        "followers" : 1999999
+}
+>
+> Activity 9 - 
+>
+> W.find({$and : [{status : "Inactive"},{password : ""}]} , {_id : 0,username : 1}).pretty();
+{ "username" : [ "git" ] }
+>
+> W.find({$or : [{$and : [{status : "Inactive"}, {password : {$exists : false}}]} , {followers : {$lt : 10}}]} , {_id : 0,username : 1});
+{ "username" : [ "git", "linked", "List" ] }
+{ "username" : [ "shubhang verma" ] }
+{ "username" : [ "git", "linked", "List", "jai Sharma" ] }
+>

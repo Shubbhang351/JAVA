@@ -1,0 +1,18 @@
+[
+  {
+    name : "Shubbhang",
+    skills : ["Python", "Java", "MongoDB", "Django"]
+  },
+  {
+    name : "hitesh",
+    skills : ["Java", "MongoDB", "React"]
+  },
+  {
+    name : "jai",
+    skills : ["Python", "Java", "MongoDB"]
+  },
+  {
+    name : "Sparsh",
+    skills : ["Python", "Java", "SQL", "Cloud"]
+  }
+]

@@ -25,3 +25,12 @@ def solve(s1,s2):
 s1 = input()
 s2 = input()
 solve(s1,s2)
+
+"""
+'#' refers to backspace
+
+input :- a1 = 'a##bc' , a2 = 'd#g#c'
+output :- true
+exp :- a1 become 'c' and a2 also become 'c'
+
+"""

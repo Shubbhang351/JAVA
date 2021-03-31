@@ -20,7 +20,7 @@ class Queen_combination {
     }
 
     public static void main(String[] args) {
-        queenCombination(new boolean[4], 0, 2, "", -1);
+        queenCombination(new boolean[4], 0, 3, "", -1);
         System.out.println(count);
     }
 }

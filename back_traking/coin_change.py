@@ -34,10 +34,10 @@ def coinChange_Combination_coin_respect(denom, amount, i, ans):
     # current (i th) coin can not contribute in amount
     coinChange_Combination_coin_respect(denom, amount, i + 1, ans)
 
-    
 
-denom = [2,3,5]
-amount = 7
+
+denom = [2,3,5,6]
+amount = 10
 lastDenomIndex = 0
 ans = ''
 coinChange_Combination_amount_respect(denom, amount, lastDenomIndex, ans)

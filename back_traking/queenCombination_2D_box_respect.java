@@ -1,9 +1,12 @@
 package back_traking;
 
 class QueenCombination_2D_box_respect {
+    static int count = 0;
+    static int count1 = 0;
     public static void queenCombination_extra_reCall(boolean[][] boxes, int tq,int qpsf,String ans, int row, int col){
         // positive base case
         if(tq == qpsf){
+            count++;
             System.out.println(ans);
             return;
         }
@@ -32,6 +35,7 @@ class QueenCombination_2D_box_respect {
     public static void queenCombination(boolean[][] boxes, int tq,int qpsf,String ans, int row, int col){
         // positive base case
         if(tq == qpsf){
+            count1++;
             System.out.println(ans);
             return;
         }
@@ -57,7 +61,8 @@ class QueenCombination_2D_box_respect {
     }
 
     public static void main(String[] args) {
-        boolean[][] boxes = new boolean[3][4];
-        queenCombination(boxes, 3, 0, "", 0, 0);
+        boolean[][] boxes = new boolean[4][4];
+        queenCombination(boxes, 4, 0, "", 0, 0);
+        System.out.println(count1);
     }
 }

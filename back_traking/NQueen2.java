@@ -10,11 +10,15 @@ class NQueen2 {
             return;
         }
 
-        for (int i = 0; i < board[row].length; i++) {
-            if (isSafeToPlaceQueen(board, row, i)) {
-                board[row][i] = true;
-                queenCombination(board, tq, qpsf + 1, row + 1, ans + "(" + row + "-" + i + ")" + " ");
-                board[row][i] = false;
+        if(row == board.length){
+            return;
+        }
+
+        for (int col = 0; col < board[row].length; col++) {
+            if (isSafeToPlaceQueen(board, row, col)) {
+                board[row][col] = true;
+                queenCombination(board, tq, qpsf + 1, row + 1, ans + "(" + row + "-" + col + ")" + " ");
+                board[row][col] = false;
             }
         }
     }

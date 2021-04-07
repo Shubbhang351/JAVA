@@ -1,7 +1,8 @@
 package back_traking;
+import java.util.*;
 
 class CoinChange_single_duplicateDenom {
-    public static void coinChange(int[] denom, int amount, String ans, int lastDenomIndex){
+    public static void coinChange_User_respect(int[] denom, int amount, String ans, int lastDenomIndex){
         if(amount == 0){
             System.out.println(ans);
             return;
@@ -17,15 +18,19 @@ class CoinChange_single_duplicateDenom {
                 continue;
             }
 
-            coinChange(denom, amount - denom[i], ans + denom[i] + " ", i + 1);
+            coinChange_User_respect(denom, amount - denom[i], ans + denom[i] + " ", i + 1);
         }
     }
+
+    // public static void coinChange_coin_respect(int[] denom, int amount, String ans, in)
 
     // we have duplicate coins in denom[] and we have to use the coin only single time.
 
     public static void main(String[] args) {
         int denom[] = {2,2,2,3,4};
 
-        coinChange(denom, 6, "", 0);
+        Arrays.sort(denom);
+
+        coinChange_User_respect(denom, 6, "", 0);
     }
 }

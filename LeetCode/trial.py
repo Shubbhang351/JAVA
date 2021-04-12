@@ -1,27 +1,34 @@
-def solve(s1,s2):
-    s3 = ""
-    s4 = ""
-    t = 0
-    for i in range(len(s1) - 1, - 1, -1):
-        if s1[i] == '#':
-            t += 1
-        else:
-            if t > 0:
-                t -= 1
-            else:
-                s3 = s1[i] + s3
-    t = 0
-    for i in range(len(s2) - 1, - 1, -1):
-        if s2[i] == '#':
-            t += 1
-        else:
-            if t > 0:
-                t -= 1
-            else:
-                s4 = s2[i] + s4
-    print(s3)
-    print(s4)
+def numDecodings(s: str) -> int:
+        for j in range(len(s)):
+            if s[j] != '0':
+                s = s[j:]
+                break
+        print(s)
+        if len(s) > 0:
+            
+            return solve(s,0)
+        return 0
 
-s1 = input()
-s2 = input()
-solve(s1,s2)
+def solve(s,i):
+        if s[i] == '0':
+            print(">>>")
+            return 0
+        elif i >= len(s) - 1:
+            return 1
+        else:
+            l = 0
+            r = 0
+            if int(s[i]) in range(1,27):
+                if i + 1 >= len(s):
+                    l = 1
+                else:
+                    l = solve(s,i + 1)
+            if int(s[i] + s[i + 1]) in range(1,27):
+                if i + 2 >= len(s):
+                    r = 1
+                else:
+                    r = solve(s,i + 2)
+            return l + r
+
+s = "226"
+print(numDecodings(s))
